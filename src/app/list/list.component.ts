@@ -15,9 +15,16 @@ export class ListComponent {
     taskName = "";
     tasks: string[] = [];
 
-    addtoList() {
+    async addtoList() {
       console.log("clicked",this.taskName);
       this.tasks.push(this.taskName);
+      this.taskName="";
+
+    }
+
+    async markComplete(index: number) {
+      console.log("clicked",this.taskName);
+      this.tasks.splice(index,1);
       this.taskName="";
 
     }
