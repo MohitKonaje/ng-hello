@@ -1,1 +1,26 @@
 <p>list works!</p>
+
+<div>
+   <label for="taskName">Task Name</label>
+          <input placeholder="Enter Task Name" type="text" [(ngModel)]="taskName"  />
+          <button (click)="addtoList()">Add</button>
+        {{taskName}}
+</div>
+
+<div class="table">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Task Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tasks ; index as i">
+                <td>{{item}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
